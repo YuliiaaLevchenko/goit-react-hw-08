@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import Contact from "../Contact/Contact";
 import css from "../ContactList/ContactList.module.css";
 import { deleteContact } from "../../redux/contacts/operations";
-import { selectContacts } from "../../redux/contacts/slice";
-import { selectNameFilter } from "../../redux/filters/slice";
+import { selectNameFilter } from "../../redux/filters/selectors";
+import { selectContacts } from "../../redux/contacts/selectors";
 
 const ContactList = () => {
 const nameFilter = useSelector(selectNameFilter);
