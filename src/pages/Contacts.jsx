@@ -5,6 +5,8 @@ import { fetchContacts } from "../redux/contacts/operations";
 import ContactList from "../components/ContactList/ContactList";
 import ContactEditor from "../components/ContactEditor/ContactEditor";
 import { selectLoading } from "../redux/contacts/selectors";
+import ContactForm from "../components/ContactForm/ContactForm";
+import SearchBox from "../components/SearchBox/SearchBox";
 
 
 const Contacts = () => {
@@ -17,7 +19,9 @@ const Contacts = () => {
 
   return (
     <>
-      <PageTitle>Your tasks</PageTitle>
+      <PageTitle>Your contacts</PageTitle>
+      <ContactForm />
+      <SearchBox />
       <ContactEditor />
       <div>{isLoading && "Request in progress..."}</div>
       <ContactList />
